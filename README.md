@@ -13,9 +13,9 @@ Run everything with a single command:
 ```
 This script will:
 
-Create and activate a virtual environment  
-Install all required Python dependencies  
-Launch the RMS Request Builder application  
+- Create and activate a virtual environment  
+- Install all required Python dependencies  
+- Launch the RMS Request Builder application  
   
 ✅ Make sure python3 is installed on your machine.
 
@@ -23,10 +23,9 @@ Launch the RMS Request Builder application
 
 📦 Requirements
 
-Python 3.9 or higher  
-Bash-compatible terminal (macOS/Linux)  
-Internet access (to reach the necessary endpoints)  
-Git clone of this repository  
+- Python 3.9 or higher  
+- Bash-compatible terminal (macOS/Linux)   
+- Git clone of this repository  
 
 ---
 
@@ -34,11 +33,13 @@ Git clone of this repository
 
 If you prefer to set things up manually:  
 
+```bash
 python3 -m venv venv  
 source venv/bin/activate  
 pip install -r requirements.txt  
 python3 rmsPlaceReq.py  
-  
+```  
+
 ---
 
 🙋 Contributing  
