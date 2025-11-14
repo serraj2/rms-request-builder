@@ -1,17 +1,47 @@
-# RMS Request Builder
+# 🧠 RMS Request Builder
 
-A graphical tool to build JSON bet requests from the internal Betfair RMS APIs.
+A simple Python GUI tool to generate structured betting request payloads.
 
-## 🧰 Features
+---
 
-- Select environment: `nxtbs1` or `intbs1`
-- Choose number of selections (1–25)
-- Generates request with correct odds and event IDs
-- Sends automatic refresh event calls
-- Copy final request to clipboard
+## 🚀 Quick Start
 
-## ▶️ How to run
+Run everything with a single command:
 
 ```bash
+./bootstrap.sh
+```
+This script will:
+
+Create and activate a virtual environment
+Install all required Python dependencies
+Launch the RMS Request Builder application
+
+✅ Make sure python3 is installed on your machine.
+
+---
+
+📦 Requirements
+
+Python 3.9 or higher
+Bash-compatible terminal (macOS/Linux)
+Internet access (to reach the necessary endpoints)
+Git clone of this repository
+
+---
+
+🐍 Manual Setup (if needed)
+
+If you prefer to set things up manually:
+
+python3 -m venv venv
+source venv/bin/activate
 pip install -r requirements.txt
-python rmsPlaceReq.py
+python3 rmsPlaceReq.py
+
+---
+
+🙋 Contributing
+
+Feel free to fork, adapt, or extend the project.
+Pull requests are welcome for improvements or additional features.
