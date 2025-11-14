@@ -66,7 +66,7 @@ NAVIGATION_PAYLOAD = {
             "language": "en",
             "regionCode": "UK"
         },
-        "maxResults": 5
+        "maxResults": 20
     },
     "facets": [],
     "currencyCode": "GBP",

@@ -1,2 +1,12 @@
+# Ignorar ambiente virtual
+venv/
+.venv/
+__pycache__/
+*.pyc
+
+# Ignorar ficheiros de IDEs
+.vscode/
+.idea/
+.DS_Store
 # Created by venv; see https://docs.python.org/3/library/venv.html
 *
