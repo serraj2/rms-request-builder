@@ -9,8 +9,6 @@ from datetime import datetime
 from config import (
     NAVIGATION_ENDPOINTS,
     MARKET_ENDPOINTS,
-    REFRESH_ENDPOINT,
-    REFRESH_HEADERS,
     NAVIGATION_HEADERS,
     NAVIGATION_PAYLOAD,
     BET_TYPE_MAP
@@ -110,27 +108,15 @@ def build_request(account_id, count, env):
         context.pop("betOdds", None)
         contexts.append(context)
 
-    refresh_ids = list(set(sel.get("eventId") for sel in chosen if sel.get("eventId") and sel.get("eventId").isdigit()))
-    def build_refresh_payload(event_ids):
-        return [
-            {"destinationId": "betfair_us", "eventId": int(eid)}
-            for eid in event_ids if eid.isdigit()
-        ]
+    # Collect event IDs for manual refresh
+    refresh_ids = list(set(
+        sel.get("eventId") for sel in chosen if sel.get("eventId") and sel.get("eventId").isdigit()
+    ))
 
-    def send_refresh_request(payload):
-        try:
-            response = requests.post(
-                REFRESH_ENDPOINT,
-                headers=REFRESH_HEADERS,
-                json=payload
-            )
-            print("Refresh request status:", response.status_code)
-        except Exception as e:
-            print("Error sending refresh request:", e)
+    if refresh_ids:
+        print(f"\n⚠️ Perform a manual refresh for event IDs: {refresh_ids}")
+        print("⚙️ Continuing request generation automatically...\n")
 
-    refresh_payload = build_refresh_payload(refresh_ids)
-    print("Sending refresh for event IDs:", refresh_ids)
-    send_refresh_request(refresh_payload)
 
     return {
         "timestamp": int(time.time()),
