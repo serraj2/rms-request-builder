@@ -25,7 +25,13 @@ This script will:
 
 - Python 3.9 or higher  
 - Bash-compatible terminal (macOS/Linux)   
-- Git clone of this repository  
+- `tkinter` GUI module (usually pre-installed with Python)  
+  
+💡 If you get an error like `ModuleNotFoundError: No module named 'tkinter'`,
+ install it manually:  
+- **Ubuntu/Debian**: `sudo apt install python3-tk`  
+- **macOS (Homebrew Python)**: typically already included  
+- **Windows**: included by default  
 
 ---
 
